@@ -1,0 +1,37 @@
+.u-align-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+  text-align: center;
+  width: 100%;
+}
+
+.u-logo-align-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  //background: green;
+  width: auto;
+  height: auto;
+}
+
+.padding-sm {
+  padding: 1.4rem;
+}
+
+.margin-sm {
+  margin: 1rem 0;
+}
+
+.margin-md {
+  margin: 2rem 0;
+}
+
+.margin-lg {
+  margin: 3rem 0;
+}
+
+.margin-xl {
+  margin: 4rem 0;
+}

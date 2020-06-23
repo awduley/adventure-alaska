@@ -1,0 +1,302 @@
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: $color-gray-light;;
+  font-size: 1.6rem;
+  cursor: default;
+}
+
+// Header section
+.header-wrap {
+  filter: drop-shadow(0 1rem 2rem $color-black);
+}
+
+.header {
+  background-size: cover;
+  background-position: top;
+  background-image: linear-gradient(to bottom right, rgba($color-secondary-2-1, .7),
+    rgba($color-secondary-2-3, .8)), url('../img/denali-md.jpg');
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  color: $color-white;
+  text-shadow: 0 .8rem .5rem $color-black;
+  position: relative;
+
+  &__logo {
+    transform: scale(.3);
+    display: inline-block;
+    margin: -11rem 0 0 -14rem;
+  }
+  
+  &__primary {
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+  }
+
+  &__secondary {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
+}
+
+// About section
+.about {
+
+  &__section {
+    text-align: center;
+  }
+
+  &__info {
+
+    h4 {
+      
+      &:not(:first-child) {
+        margin: 4rem 0 1rem 0;
+      }
+    }
+
+    p {
+      color: $color-gray-medium;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    }
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__image {
+    border-radius: 2px;
+    border: 2px solid $color-secondary-2-4;
+    display: block;
+    margin: 2rem auto;
+    width: 88%;
+    max-width: 60rem;
+    @include transition-fast;
+
+    &:hover {
+      transform: translateY(1rem) scale(1.05);
+    }
+  }
+
+  &__figure {
+    padding: 1rem 0;
+    color: $color-gray-dark;
+    @include transition-fast;
+  
+    figcaption {
+      width: 80%;
+      max-width: 58rem;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-1 {
+      background-image: linear-gradient(to bottom, rgba($color-secondary-2-2, 0), rgba($color-secondary-2-3, .6), rgba($color-secondary-2-2, 0));
+    }
+
+    &-2 {
+      background-image: linear-gradient(to bottom, rgba($color-secondary-2-0, 0), rgba($color-secondary-2-1, .6), rgba($color-secondary-2-0, 0));
+    }
+
+    &-3 {
+      background-image: linear-gradient(to bottom, rgba($color-secondary-2-2, 0), rgba($color-secondary-2-3, .6), rgba($color-secondary-2-2, 0));
+    }
+  }
+}
+
+// Main section 
+.main {
+
+  .main__adventure-packages {
+
+  }
+
+  .main__adventure-package {
+
+  }
+}
+
+.card {
+  perspective: 200rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 72rem;
+  max-width: 60rem;
+  margin: 4rem auto;
+  text-align: center;
+
+  &__logo {
+    position: relative;
+    margin-top: -3rem;
+  }
+
+  &__image-logo {
+    transform: scale(.5);
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__side {
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem $color-black;
+    @include transition-slow;
+  }
+
+  &__front {
+    background-color: $color-white;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    height: 66.7rem;
+    width: 100%;
+
+    &--1 {
+      background-image: linear-gradient(to bottom right, $color-secondary-2-2, $color-secondary-2-4);
+    }
+
+    &--2 {
+      background-image: linear-gradient(to bottom right, $color-secondary-2-1, $color-secondary-2-0);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to bottom right, $color-complement-1, $color-complement-4);
+    }
+  }
+
+  &:hover &__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__back {
+    transform: rotateY(0);
+  }
+
+  &__img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 32rem;
+    background-blend-mode: hue;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--2 {
+      background-blend-mode: color-burn;
+    }
+
+    &--3 {
+      background-blend-mode: overlay;
+    }
+
+    &--1 {
+      background-image: linear-gradient(to bottom right, 
+      $color-secondary-2-2, $color-secondary-2-4), 
+      url('../img/kayak2-md.jpg');
+    }
+
+    &--2 {
+      background-image: linear-gradient(to bottom right, 
+      $color-secondary-2-1, $color-secondary-2-0),
+      url('../img/flightseeing2-md.jpg');
+    }
+
+    &--3 {
+      background-image: linear-gradient(to bottom right, 
+      $color-secondary-2-1, $color-secondary-2-4),
+      url('../img/charter1-md.jpg');
+    }
+  }
+
+  &__package {
+    font-size: 5.2rem;
+    font-weight: 300;
+    color: $color-white;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__package--2 {
+    color: $color-white;
+  }
+
+  &__package--3 {
+    color: $color-gray-dark;
+  }
+
+    // possible span here
+
+  &__info {
+    text-align: center;
+    padding: 1rem;
+
+    ul {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      li {
+        margin: 2rem;
+        list-style: none;
+        
+        
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light;
+        }
+      }
+    }
+  }
+
+  &__offer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color-gray-light;
+
+  }
+
+  &__value {
+    font-size: 2.4rem;
+  }
+
+  &__price {
+    font-size: 10rem;
+    margin-bottom: 0;
+  }
+}
+
+// Footer area
+.footer {
+  
+}

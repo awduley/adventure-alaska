@@ -1,0 +1,104 @@
+// Personal variables
+$color-white: #fff;
+$color-black: #000;
+$color-gray-light: #efefef;
+$color-gray-medium: #787878;
+$color-gray-dark: #333;
+
+// As hex codes */
+
+$color-primary-0: #B8444D;	// Main Primary color */
+$color-primary-1: #FAADB3;
+$color-primary-2: #E0777E;
+$color-primary-3: #96232C;
+$color-primary-4: #6B070E;
+
+$color-secondary-1-0: #BD7946;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFD2B1;
+$color-secondary-1-2: #E6A87A;
+$color-secondary-1-3: #9A5624;
+$color-secondary-1-4: #6E3307;
+
+$color-secondary-2-0: #2C756E;	// Main Secondary color (2) */
+$color-secondary-2-1: #7AB0AA;
+$color-secondary-2-2: #4C8F88;
+$color-secondary-2-3: #166058;
+$color-secondary-2-4: #04443D;
+
+$color-complement-0: #479C3A;	// Main Complement color */
+$color-complement-1: #A1DB98;
+$color-complement-2: #71BE65;
+$color-complement-3: #2B801E;
+$color-complement-4: #115B06;
+
+
+
+// As RGBa codes */
+
+$rgba-primary-0: rgba(184, 68, 77,1);	// Main Primary color */
+$rgba-primary-1: rgba(250,173,179,1);
+$rgba-primary-2: rgba(224,119,126,1);
+$rgba-primary-3: rgba(150, 35, 44,1);
+$rgba-primary-4: rgba(107,  7, 14,1);
+
+$rgba-secondary-1-0: rgba(189,121, 70,1);	// Main Secondary color (1) */
+$rgba-secondary-1-1: rgba(255,210,177,1);
+$rgba-secondary-1-2: rgba(230,168,122,1);
+$rgba-secondary-1-3: rgba(154, 86, 36,1);
+$rgba-secondary-1-4: rgba(110, 51,  7,1);
+
+$rgba-secondary-2-0: rgba( 44,117,110,1);	// Main Secondary color (2) */
+$rgba-secondary-2-1: rgba(122,176,170,1);
+$rgba-secondary-2-2: rgba( 76,143,136,1);
+$rgba-secondary-2-3: rgba( 22, 96, 88,1);
+$rgba-secondary-2-4: rgba(  4, 68, 61,1);
+
+$rgba-complement-0: rgba( 71,156, 58,1);	// Main Complement color */
+$rgba-complement-1: rgba(161,219,152,1);
+$rgba-complement-2: rgba(113,190,101,1);
+$rgba-complement-3: rgba( 43,128, 30,1);
+$rgba-complement-4: rgba( 17, 91,  6,1);
+
+
+
+// Transitions
+@mixin transition-slow {
+  transition: all .8s ease;
+}
+
+@mixin transition-medium {
+  transition: all .4s ease;
+}
+
+@mixin transition-fast {
+  transition: all .2s ease;
+}
+
+// Media queries
+@mixin xs {
+  @media(max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media(min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media(min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media(min-width: 992px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media(min-width: 1200px) {
+    @content;
+  }
+}

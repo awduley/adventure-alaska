@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  margin: 22rem auto 0;
+  width: 22rem;
+  height: 6rem;
+  background-color: $color-white;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  position: relative;
+  box-shadow: 0 .4rem 1rem $color-black;
+  @include transition-fast;
+  text-align: center;
+  padding: 1.6rem 0 0;
+
+  button {
+    font-size: 2.2rem;
+    border: none;
+    background: transparent;
+  }
+
+  a:link,
+  a:visited {
+    color: $color-gray-dark;
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+  }
+}

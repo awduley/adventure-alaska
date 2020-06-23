@@ -1,0 +1,26 @@
+.heading-primary {
+
+}
+
+.heading-secondary {
+  @include transition-medium;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, $color-secondary-1-2, $color-secondary-1-4);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+
+  &:hover {
+    
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.1rem;
+}
+
+.heading-quaternary {
+  font-size: 1.8rem;
+}
