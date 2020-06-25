@@ -1,6 +1,6 @@
 .u-align-center {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -85%);
   text-align: center;
@@ -49,9 +49,10 @@ html {
 }
 
 body {
-  background: #efefef;
-  font-size: 1.6rem;
+  background-color: #fff;
+  font-size: 1.7rem;
   cursor: default;
+  font-family: "Roboto", sans-serif;
 }
 
 .header-wrap {
@@ -63,6 +64,7 @@ body {
   background-position: top;
   background-image: linear-gradient(to bottom right, rgba(122, 176, 170, 0.7), rgba(22, 96, 88, 0.8)), url("/denali-md.59acb646.jpg");
   height: 90vh;
+  font-family: "pine_forestpersonal_use";
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   color: #fff;
   text-shadow: 0 0.8rem 0.5rem #000;
@@ -74,17 +76,22 @@ body {
   margin: -11rem 0 0 -14rem;
 }
 .header__primary {
-  font-size: 4rem;
+  font-size: 8rem;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1.4rem;
+  letter-spacing: 0.2rem;
+  line-height: 7.4rem;
 }
 .header__secondary {
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
 
+.about__heading {
+  margin: 6rem auto 2rem;
+}
 .about__section {
   text-align: center;
 }
@@ -135,9 +142,12 @@ body {
   background-image: linear-gradient(to bottom, rgba(76, 143, 136, 0), rgba(22, 96, 88, 0.6), rgba(76, 143, 136, 0));
 }
 
+.main__heading {
+  margin: 2rem auto 6rem;
+}
 .card {
   perspective: 200rem;
-  -moz-perspective: 150rem;
+  -moz-perspective: 200rem;
   position: relative;
   height: 72rem;
   max-width: 60rem;
@@ -170,7 +180,7 @@ body {
 }
 .card__back {
   transform: rotateY(180deg);
-  height: 66.7rem;
+  height: 69rem;
   width: 100%;
 }
 .card__back--1 {
@@ -259,6 +269,80 @@ body {
   margin-bottom: 0;
 }
 
+.testimonials {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to bottom right, rgba(122, 176, 170, 0.6), rgba(4, 68, 61, 0.7)), url("/footer-bg-md.2ce5c1eb.jpg");
+  padding: 12rem 1rem;
+  clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+  margin: 6rem 0;
+}
+.testimonials__heading {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom right, #FFD2B1, #E6A87A);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.testimonial {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: left;
+  border-radius: 3px;
+  width: 90%;
+  margin: 3rem auto;
+}
+.testimonial__img {
+  display: block;
+  margin: 2rem auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+  border: 0.06rem solid #000;
+}
+.testimonial__text {
+  color: #000;
+  width: 80%;
+  padding: 0 1rem 1rem 1rem;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+.testimonial__text p {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+.attribution-right {
+  text-align: right;
+}
+
+.end {
+  margin: 2rem auto;
+  text-align: center;
+  color: #333;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to bottom right, rgba(122, 176, 170, 0.1), rgba(4, 68, 61, 0.4));
+  box-shadow: inset 0 0 1rem 0.1rem #000;
+  padding: 0.1rem;
+}
+.end p {
+  margin: 1rem;
+}
+.end > * {
+  margin: 2rem;
+}
+.end__gradient {
+  background-image: linear-gradient(to bottom right, #026795, #7E1C65);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .btn {
   display: block;
   margin: 22rem auto 0;
@@ -268,8 +352,11 @@ body {
   border-radius: 5rem;
   border: none;
   outline: none;
-  position: relative;
-  box-shadow: 0 0.4rem 1rem #000;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0.6rem 0.6rem #000;
   transition: all 0.2s ease;
   text-align: center;
   padding: 1.6rem 0 0;
@@ -284,12 +371,19 @@ body {
   color: #333;
 }
 .btn:hover {
-  transform: translateY(-0.3rem);
+  transform: translate(-50%, -0.3rem);
+  box-shadow: 0 1rem 1.2rem #000;
 }
 
+@font-face {
+  font-family: "pine_forestpersonal_use";
+  src: url("/pine_forest_personal_use_only-webfont.12cfc0b7.woff2") format("woff2"), url("/pine_forest_personal_use_only-webfont.9922b620.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .heading-secondary {
   transition: all 0.4s ease;
-  font-size: 2.3rem;
+  width: 90%;
   font-weight: 700;
   text-transform: uppercase;
   background-image: linear-gradient(to bottom right, #E6A87A, #6E3307);
@@ -303,6 +397,45 @@ body {
 
 .heading-quaternary {
   font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials {
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  }
+  .testimonials__heading {
+    margin-top: -4rem;
+  }
+}
+@media (min-width: 992px) {
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  .main__adventure-packages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+  }
+
+  .card {
+    width: 30rem;
+    max-width: 40rem;
+    width: 100%;
+  }
+  .card__back {
+    height: 72rem;
+  }
+  .card__front {
+    height: 72rem;
+  }
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.testimonials__heading {
+  grid-column: 1/-1;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

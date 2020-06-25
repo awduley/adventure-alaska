@@ -12,9 +12,12 @@ html {
 }
 
 body {
-  background: $color-gray-light;;
-  font-size: 1.6rem;
+  //background: $color-gray-medium;
+  background-color: $color-white;
+  //background: blue;
+  font-size: 1.7rem;
   cursor: default;
+  font-family: 'Roboto', sans-serif;
 }
 
 // Header section
@@ -28,6 +31,7 @@ body {
   background-image: linear-gradient(to bottom right, rgba($color-secondary-2-1, .7),
     rgba($color-secondary-2-3, .8)), url('../img/denali-md.jpg');
   height: 90vh;
+  font-family: 'pine_forestpersonal_use';
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   color: $color-white;
   text-shadow: 0 .8rem .5rem $color-black;
@@ -40,14 +44,16 @@ body {
   }
   
   &__primary {
-    font-size: 4rem;
+    font-size: 8rem;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
+    letter-spacing: .2rem;
+    line-height: 7.4rem;
   }
 
   &__secondary {
-    font-size: 2rem;
+    font-size: 2.6rem;
     font-weight: 400;
     letter-spacing: .1rem;
   }
@@ -55,6 +61,10 @@ body {
 
 // About section
 .about {
+
+  &__heading {
+    margin: 6rem auto 2rem;
+  }
 
   &__section {
     text-align: center;
@@ -127,6 +137,10 @@ body {
 // Main section 
 .main {
 
+  &__heading {
+    margin: 2rem auto 6rem;
+  }
+
   .main__adventure-packages {
 
   }
@@ -138,7 +152,7 @@ body {
 
 .card {
   perspective: 200rem;
-  -moz-perspective: 150rem;
+  -moz-perspective: 200rem;
   position: relative;
   height: 72rem;
   max-width: 60rem;
@@ -175,7 +189,7 @@ body {
 
   &__back {
     transform: rotateY(180deg);
-    height: 66.7rem;
+    height: 69rem;
     width: 100%;
 
     &--1 {
@@ -296,7 +310,96 @@ body {
   }
 }
 
+// Testimonials area
+.testimonials {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to bottom right, rgba($color-secondary-2-1, .6),
+  rgba($color-secondary-2-4, .7)), url('../img/footer-bg-md.jpg');
+  padding: 12rem 1rem;
+  clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+  margin: 6rem 0;
+
+  &__heading {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom right, $color-secondary-1-1, $color-secondary-1-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+}
+
+.testimonial {
+  display: block;
+  background-color: rgba($color-white, .3);
+  text-align: left;
+  border-radius: 3px;
+  width: 90%;
+  margin: 3rem auto;
+
+  &__img {
+    display: block;
+    margin: 2rem auto;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    border: .06rem solid $color-black;
+  }
+
+  &__text {
+    color: $color-black;
+    width: 80%;
+    padding: 0 1rem 1rem 1rem;
+    line-height: 2rem;
+    margin: 0 auto;
+
+    p {
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+.attribution-right {
+  text-align: right;
+}
+
 // Footer area
 .footer {
-  
+
+}
+
+.end {
+  margin: 2rem auto;
+  text-align: center;
+  color: $color-gray-dark;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to bottom right, rgba($color-secondary-2-1, .1),
+  rgba($color-secondary-2-4, .4));
+  box-shadow: inset 0 0 1rem .1rem $color-black;
+  padding: .1rem;
+
+  p {
+    margin: 1rem;
+  }
+
+  & > * {
+    margin: 2rem;
+  }
+
+  &__credit {
+
+  }
+
+  &__gradient {
+    background-image: linear-gradient(to bottom right, $color-cff-blue, $color-cff-purple);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 }

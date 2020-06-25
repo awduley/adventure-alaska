@@ -11,11 +11,53 @@
 // Tablets and small laptops
 @include md {
 
+  .testimonials {
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+
+    &__heading {
+      margin-top: -4rem;
+    }
+  }
 }
 
 // Laptops and small televisions
 @include lg {
 
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  .main {
+
+    &__adventure-packages {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3rem;
+    }
+  }
+  
+  .card {
+    width: 30rem;
+    max-width: 40rem;
+    width: 100%;
+
+    &__back {
+      height: 72rem;
+    }
+
+    &__front {
+      height: 72rem;
+    }
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__heading {
+    grid-column: 1 / -1;
+  }
 }
 
 // Large monitors and televisions
