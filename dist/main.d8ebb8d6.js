@@ -119,9 +119,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"scripts/main.js":[function(require,module,exports) {
 // Variables from the dom
-var credit = document.querySelector('.end__year'); // Get full year method
+var credit = document.querySelector('.end__year');
+var lines = document.querySelector('.nav__lines');
+var line1 = document.querySelector('.nav__line--1');
+var line2 = document.querySelector('.nav__line--2');
+var line3 = document.querySelector('.nav__line--3');
+var navLinks = document.querySelector('.nav__links');
+var fullYear; // Functionality for the hamburger button
 
-var fullYear = new Date().getFullYear(); // Adding fullYear into the credit span
+lines.addEventListener('click', function () {
+  line1.classList.toggle('nav__action--1');
+  line2.classList.toggle('nav__action--2');
+  line3.classList.toggle('nav__action--3');
+  navLinks.classList.toggle('drop-down');
+}); // Get full year method
+
+fullYear = new Date().getFullYear(); // Adding fullYear into the credit span
 
 credit.innerText = fullYear;
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -152,7 +165,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64262" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62363" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

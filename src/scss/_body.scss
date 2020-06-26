@@ -12,9 +12,7 @@ html {
 }
 
 body {
-  //background: $color-gray-medium;
   background-color: $color-white;
-  //background: blue;
   font-size: 1.7rem;
   cursor: default;
   font-family: 'Roboto', sans-serif;
@@ -38,13 +36,22 @@ body {
   position: relative;
 
   &__logo {
-    transform: scale(.3);
+    transform: scale(.275);
     display: inline-block;
     margin: -11rem 0 0 -14rem;
   }
+
+  &__headings {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    text-align: center;
+    width: 100%;
+  }
   
   &__primary {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 1.4rem;

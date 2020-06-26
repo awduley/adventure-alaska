@@ -54,11 +54,60 @@
 
 // Tablets and small laptops
 @include md {
+  
+  .nav__links {
+    left: 50%;
+    transform: translate(-50%, -6rem);
+    width: 60rem;
+    height: auto;
+    padding: 1rem 2rem;
+    background: none;
+  }
+
+  .nav__links {
+
+  
+    ul {
+      flex-direction: row;
+  
+      li {
+        list-style: none;
+        margin: 0 1.6rem;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 3.6rem;
+        text-shadow: 0 .6rem .6rem $color-black;
+        border-bottom: none;
+        @include transition-fast;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, .1);
+          padding: .2rem .8rem;
+          border-radius: 3px;
+        }
+  
+        a {
+          text-decoration: none;
+          color: $color-white;
+        
+          :link,
+          :visited {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  
+    &.drop-down {
+      left: 50%;
+      transform: translate(-50%, -2%);
+    }
+  }
 
   .header {
 
     .nav {
-      top: 2%;
+      top: 3%;
       right: 1%;
     }
 
