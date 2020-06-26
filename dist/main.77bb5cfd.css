@@ -88,6 +88,11 @@ body {
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
+.header .nav {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
 
 .about__heading {
   margin: 6rem auto 2rem;
@@ -155,7 +160,7 @@ body {
   text-align: center;
 }
 .card__logo {
-  position: relative;
+  width: 100%;
   margin-top: -3rem;
 }
 .card__image-logo {
@@ -230,12 +235,7 @@ body {
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-}
-.card__package--2 {
-  color: #fff;
-}
-.card__package--3 {
-  color: #333;
+  text-shadow: 1rem 0 1rem #000;
 }
 .card__info {
   text-align: center;
@@ -265,8 +265,9 @@ body {
   font-size: 2.4rem;
 }
 .card__price {
-  font-size: 10rem;
+  font-size: 9rem;
   margin-bottom: 0;
+  font-weight: lighter;
 }
 
 .testimonials {
@@ -277,6 +278,8 @@ body {
   padding: 12rem 1rem;
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
   margin: 6rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .testimonials__heading {
   width: 90%;
@@ -375,6 +378,26 @@ body {
   box-shadow: 0 1rem 1.2rem #000;
 }
 
+.nav__circle {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.nav__lines {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25%;
+}
+.nav__line {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: #2C756E;
+  margin: 0.3rem;
+}
+
 @font-face {
   font-family: "pine_forestpersonal_use";
   src: url("/pine_forest_personal_use_only-webfont.12cfc0b7.woff2") format("woff2"), url("/pine_forest_personal_use_only-webfont.9922b620.woff") format("woff");
@@ -399,17 +422,76 @@ body {
   font-size: 1.8rem;
 }
 
+@media (max-width: 576px) {
+  .header__logo {
+    transform: scale(0.2 0.5);
+    margin-top: -11.5rem;
+  }
+
+  .card {
+    width: 30rem;
+    max-width: 40rem;
+    width: 100%;
+    margin-bottom: 22rem;
+  }
+  .card:not(.card:last-child) {
+    margin-bottom: 7rem;
+  }
+  .card__image-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+  }
+  .card__back {
+    height: 86rem;
+  }
+  .card__front {
+    height: 86rem;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .testimonials {
+    margin-top: -2rem;
+  }
+}
 @media (min-width: 768px) {
+  .header .nav {
+    top: 2%;
+    right: 1%;
+  }
+
   .testimonials {
     clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
   }
   .testimonials__heading {
-    margin-top: -4rem;
+    margin-top: 4rem;
   }
 }
 @media (min-width: 992px) {
   h2 {
     font-size: 3.4rem;
+  }
+
+  .header__logo {
+    transform: scale(0.5);
+    margin: -8rem 0 0 -12rem;
+  }
+
+  .about__images {
+    display: flex;
+    margin-top: 2rem;
+    background-image: linear-gradient(to bottom, rgba(76, 143, 136, 0), rgba(22, 96, 88, 0.6), rgba(76, 143, 136, 0));
+  }
+
+  .about__figure-1, .about__figure-2, .about__figure-3 {
+    background: none;
   }
 
   .main__adventure-packages {
@@ -423,19 +505,30 @@ body {
     max-width: 40rem;
     width: 100%;
   }
+  .card__image-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+  }
   .card__back {
-    height: 72rem;
+    height: 75rem;
   }
   .card__front {
-    height: 72rem;
+    height: 75rem;
   }
-}
-.testimonials {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.testimonials__heading {
-  grid-column: 1/-1;
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonials__heading {
+    grid-column: 1/-1;
+  }
+
+  .testimonial {
+    padding-top: 0.3rem;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

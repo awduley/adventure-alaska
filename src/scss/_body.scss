@@ -57,6 +57,12 @@ body {
     font-weight: 400;
     letter-spacing: .1rem;
   }
+
+  .nav {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+  }
 }
 
 // About section
@@ -160,7 +166,7 @@ body {
   text-align: center;
 
   &__logo {
-    position: relative;
+    width: 100%;
     margin-top: -3rem;
   }
 
@@ -257,17 +263,8 @@ body {
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    text-shadow: 1rem 0 1rem $color-black;
   }
-
-  &__package--2 {
-    color: $color-white;
-  }
-
-  &__package--3 {
-    color: $color-gray-dark;
-  }
-
-    // possible span here
 
   &__info {
     text-align: center;
@@ -305,8 +302,9 @@ body {
   }
 
   &__price {
-    font-size: 10rem;
+    font-size: 9rem;
     margin-bottom: 0;
+    font-weight: lighter;
   }
 }
 
@@ -320,6 +318,8 @@ body {
   padding: 12rem 1rem;
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
   margin: 6rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
 
   &__heading {
     width: 90%;
